@@ -4,18 +4,39 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    // 4. 스크립트 직렬화 기능을 이용하여
+    // 3번에서 구현한 점프의 강도를 조절할 수 있도록 수정
+
+    [SerializeField]
     public float Speed = 10.0f;
     public float rotateSpeed = 10.0f;
     public float jumpForce = 1.0f;
+
 
     Rigidbody body;
     float h, v;
 
 
+    // 2. 스크립트 메시지 이벤트 함수를 이용하여
+    // 게임이 시작하자마자 이름이 "Player"로 바꾸는
+    // 컴포넌트 구현
+
+    private void Awake()
+    {
+        this.name = "Player";
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody>();
+        // 3. 스크립트를 이용하여 게임이 시작하자마자
+        // 위로 점프하는 컴포넌트 구현
+        // 리지드바디 컴포넌트에
+        //  AddForce(Vector3.up * 5, ForceMode.Impulse)
+        body.AddForce(Vector3.up * 5, ForceMode.Impulse);
+
+
     }
 
     // Update is called once per frame

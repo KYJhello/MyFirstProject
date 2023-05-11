@@ -19,9 +19,14 @@ public class CamController : MonoBehaviour
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
         Vector3 dir = new Vector3(h,0, v);
-        if(!(h ==0 && v == 0)){
-            transform.position += player.transform.position - transform.position;            
+        Vector3 dir2 = new Vector3(0, 2.0f, 2.0f);
+
+        if (!(h ==0 && v == 0)){
+            transform.position += player.transform.position - transform.position;
+
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotateSpeed);
+            if(transform.rotation.z < 0) { transform.position += dir2; }
+            else { transform.position -= dir2; }
         }
         
     }
