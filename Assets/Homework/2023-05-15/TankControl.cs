@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,15 @@ public class TankControl : MonoBehaviour
     [SerializeField] private Transform bulletPoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float repeatTime = 0.1f;
+
+
+    // 카메라
+    [SerializeField] private CinemachineVirtualCamera virtualCamera;
+
+    //음향
+    [SerializeField] public AudioSource fireSound;
+
+
     private void Update()
     {
         Move();
@@ -59,10 +69,12 @@ public class TankControl : MonoBehaviour
     private Coroutine bulletRoutine;
     IEnumerator BulletMakeRoutine()
     {
+        fireSound = gameObject.GetComponent<AudioSource>();
         while (true)
         {
             // 매개변수 (생성 프리펩, 생성 위치, 생성 방향)
             Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
+            fireSound.Play();
             // repeatTime마다
             yield return new WaitForSeconds(repeatTime);
         }
@@ -81,5 +93,15 @@ public class TankControl : MonoBehaviour
             Debug.Log("땠을떄");
         }
     }
-
+    private void OnZoom(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            virtualCamera.Priority = 1;
+        }
+        else
+        {
+            virtualCamera.Priority = 50;
+        }
+    }
 }

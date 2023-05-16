@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1629920396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MuzzlePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 8504915834317424449}
   - component: {fileID: 8504915834318194451}
   - component: {fileID: 8504915834319193555}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankChassis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,8 @@ GameObject:
   - component: {fileID: 8504915834401225425}
   - component: {fileID: 8504915834401225437}
   - component: {fileID: 8504915834401225435}
-  m_Layer: 0
+  - component: {fileID: 6377205128916033575}
+  m_Layer: 6
   m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,8 +183,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5263021, y: 1.7244704, z: 1}
-  m_Center: {x: 0.08697724, y: 0.9070841, z: -9.343951e-16}
+  m_Size: {x: 1.5263021, y: 1.128829, z: 2.3217425}
+  m_Center: {x: 0.08697724, y: 0.5431007, z: -0.020460844}
 --- !u!33 &8504915834401225424
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -282,6 +283,20 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!136 &6377205128916033575
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504915834317200035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6229766
+  m_Height: 1.335072
+  m_Direction: 2
+  m_Center: {x: 0.02353245, y: 1.2637479, z: -0.22391224}
 --- !u!1 &8504915834317200037
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +308,7 @@ GameObject:
   - component: {fileID: 8504915834317424453}
   - component: {fileID: 8504915834318194459}
   - component: {fileID: 8504915834319193563}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankTracksRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +392,7 @@ GameObject:
   - component: {fileID: 8504915834317424455}
   - component: {fileID: 8504915834318194453}
   - component: {fileID: 8504915834319193557}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankTracksLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +476,7 @@ GameObject:
   - component: {fileID: 8504915834317424459}
   - component: {fileID: 8504915834318194449}
   - component: {fileID: 8504915834319193553}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8504915834317424463}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankRenderers
   m_TagString: Untagged
   m_Icon: {fileID: 0}

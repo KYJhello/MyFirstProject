@@ -7,6 +7,9 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed = 10f;
+    [SerializeField] private GameObject explosionEffect;
+
+    [SerializeField] private AudioSource explosionSource;
 
     private Rigidbody rb;
 
@@ -16,8 +19,16 @@ public class Bullet : MonoBehaviour
     }
     private void Start()
     {
+        explosionSource = gameObject.GetComponent<AudioSource>();
         // 1. 생성시 앞으로 날아가기 구현
         rb.velocity = transform.forward * bulletSpeed;
         Destroy(gameObject, 5f);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("충돌 발생 객체 소멸");
+        Instantiate(explosionEffect, transform.position, transform.rotation);
+        Destroy(gameObject);
+
     }
 }
