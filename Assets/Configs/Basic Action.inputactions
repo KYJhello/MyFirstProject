@@ -165,7 +165,7 @@
                 {
                     "name": "",
                     "id": "ab9c704b-6240-4d7d-8962-eea2db5b13a7",
-                    "path": "<Gamepad>/leftStick",
+                    "path": "<AndroidJoystick>/stick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -177,6 +177,17 @@
                     "name": "",
                     "id": "57b31563-3031-405a-9429-70f1c21cce71",
                     "path": "<Touchscreen>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f65d260-0416-4ec7-aa9b-748814023d71",
+                    "path": "<Joystick>/stick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

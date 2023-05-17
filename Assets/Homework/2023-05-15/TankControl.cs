@@ -1,6 +1,7 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,6 +19,7 @@ public class TankControl : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float repeatTime = 0.1f;
 
+    public Animator animator;
 
     // 카메라
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
@@ -25,6 +27,15 @@ public class TankControl : MonoBehaviour
     //음향
     [SerializeField] public AudioSource fireSound;
 
+    private void Awake()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
+    private void Start()
+    {
+        fireSound = gameObject.GetComponent<AudioSource>();
+        //animator = gameObject.GetComponentInChildren<Animator>();
+    }
 
     private void Update()
     {
@@ -60,16 +71,24 @@ public class TankControl : MonoBehaviour
     }
 
     // 2. 플레이어의 Fire(좌클릭)입력으로 총알생성 구현
-    public void OnFire(InputValue value)
-    { 
+    //public void OnFire(InputValue value)
+    //{
+    //    fireSound.Play();
+    //    Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
+    //    animator.SetTrigger("Fire");
+    //}
+    public void Fire()
+    {
+        fireSound.Play();
         Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
+        animator.SetTrigger("Fire");
     }
 
     // 3. 코루틴을 이용하여 누르고 있는 동안 연사 구현
     private Coroutine bulletRoutine;
     IEnumerator BulletMakeRoutine()
     {
-        fireSound = gameObject.GetComponent<AudioSource>();
+        
         while (true)
         {
             // 매개변수 (생성 프리펩, 생성 위치, 생성 방향)
