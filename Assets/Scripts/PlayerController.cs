@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
         transform.rotation = Quaternion.identity; //0,0,0
         transform.rotation = Quaternion.Euler(0, 90, 0);
-        Vector3 rotation = transform.rotation.ToEulerAngles();
+        //Vector3 rotation = transform.rotation.ToEulerAngles();
     }
     public void Jump()
     {

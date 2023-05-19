@@ -5,13 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Homework/2023-05-17/MainMenuScene.unity
     guid: 370aa78ccc2e93c4793d545faf073484
   - enabled: 0
     path: Assets/Homework/2023-05-16/Scene16.unity
     guid: 03843cde5f6a88c48ab41febc3f76e0c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Homework/2023-05-17/GameScene.unity
-    guid: c166325b9fecebf42aa934bbafc52462
+    guid: b203481064e7f0d46bddb121c98d547b
+  - enabled: 1
+    path: Assets/Homework/2023-05-18/MainMenuScene0518.unity
+    guid: 3cb1daa9101068047a1e3e2fcd380c66
+  - enabled: 1
+    path: Assets/Homework/2023-05-18/Secene0518.unity
+    guid: e11288b4fb02916408771b01b9b8e9fb
   m_configObjects: {}

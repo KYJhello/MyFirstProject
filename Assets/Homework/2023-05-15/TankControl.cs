@@ -82,6 +82,8 @@ public class TankControl : MonoBehaviour
         fireSound.Play();
         Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
         animator.SetTrigger("Fire");
+
+        GameManager.Data.AddShootCount(1);
     }
 
     // 3. 코루틴을 이용하여 누르고 있는 동안 연사 구현

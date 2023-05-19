@@ -364,7 +364,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: GameScene
+          m_StringArgument: Secene0518
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &944383590
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1086070372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65483a7cd7216e34894f61cbd5f37aa2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5100e6ae1fe2bea4fab0d3a4955294c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1339054037

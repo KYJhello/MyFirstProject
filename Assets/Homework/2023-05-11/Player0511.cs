@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player0511 : MonoBehaviour
 {
     // 4. 스크립트 직렬화 기능을 이용하여
     // 3번에서 구현한 점프의 강도를 조절할 수 있도록 수정
